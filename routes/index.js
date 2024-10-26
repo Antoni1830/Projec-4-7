@@ -1,5 +1,6 @@
 const router= require('express').Router();
 const express=require("express");
+const passport = require('passport');
 router.use('/',require('./sawgger'));
 
 
@@ -16,6 +17,8 @@ router.use('/Game',require('./Game'));
 
 
 router.use('/Genere',require('./Genere'));
+
+router.get('/login', passport.authenticate('github'), (req, res)=>{});
 
 router.get('/logout',function(req,res,next){
     req.logout(function(err){

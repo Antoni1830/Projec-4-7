@@ -25,6 +25,26 @@
         }
       }
     },
+    "/login": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/api-docs": {
       "get": {
         "description": "",
@@ -512,16 +532,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "Game": {
+                "Genere": {
                   "example": "any"
                 },
-                "Developer": {
-                  "example": "any"
-                },
-                "release_date": {
-                  "example": "any"
-                },
-                "Best_Player": {
+                "number_of_players": {
                   "example": "any"
                 }
               }
@@ -579,16 +593,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "Game": {
+                "Genere": {
                   "example": "any"
                 },
-                "Developer": {
-                  "example": "any"
-                },
-                "release_date": {
-                  "example": "any"
-                },
-                "Best_Player": {
+                "number_of_players": {
                   "example": "any"
                 }
               }

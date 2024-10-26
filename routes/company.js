@@ -11,7 +11,7 @@ router.get('/:id',CompanyController.getSingle);
 
 router.post('/',validateCreate, CompanyController.createUser);
 
-router.put('/:id',CompanyController.updateUser);
+router.put('/:id',validateCreate,CompanyController.updateUser);
 
 router.delete('/:id', CompanyController.deleteUser);
 

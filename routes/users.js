@@ -10,9 +10,9 @@ router.get('/', usersController.getAll);
 router.get('/:id',usersController.getSingle);
 
 
-router.post('/',isAuthenticated ,validateCreate,usersController.createUser);
+router.post('/',isAuthenticated,validateCreate,usersController.createUser);
 
-router.put('/:id',usersController.updateUser);
+router.put('/:id',isAuthenticated,usersController.updateUser);
 
 router.delete('/:id', usersController.deleteUser);
 

@@ -1,6 +1,6 @@
 const{check}= require('express-validator')
 const{validateResult}=require('../helpers/validate_game')
-const validateCreate=[ // FavoriteGame,FirstName,Gaming-platform,LastName,age,birthday,email
+const validateGame=[ 
 check('Game').exists().not().isEmpty(), 
 check('Developer').exists().not().isEmpty(),
 check('release_date').exists().not().isEmpty(),
@@ -12,4 +12,4 @@ check('Best_Player').exists().not().isEmpty(),
 }
 ]
 
-module.exports={validateCreate}
+module.exports={validateGame}
