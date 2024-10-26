@@ -12,4 +12,10 @@ router.use('/users',require('./users'));
 
 router.use('/company',require('./company'));
 
+router.use('/Game',require('./Game'));
+
+
+router.use('/Genere',require('./Genere'));
+
+
 module.exports=router;

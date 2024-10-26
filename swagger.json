@@ -9,7 +9,6 @@
   "host": "localhost:3005",
   "basePath": "/",
   "schemes": [
-    
     "http"
   ],
   "paths": {
@@ -234,6 +233,9 @@
                 },
                 "best_year": {
                   "example": "any"
+                },
+                "worst_year": {
+                  "example": "any"
                 }
               }
             }
@@ -290,19 +292,303 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "Name": {
                   "example": "any"
                 },
-                "lastName": {
+                "Founder": {
                   "example": "any"
                 },
-                "email": {
+                "Foundation": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "Most_Popular_Game": {
                   "example": "any"
                 },
-                "birthday": {
+                "Country": {
+                  "example": "any"
+                },
+                "best_year": {
+                  "example": "any"
+                },
+                "worst_year": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Game/": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Game": {
+                  "example": "any"
+                },
+                "Developer": {
+                  "example": "any"
+                },
+                "release_date": {
+                  "example": "any"
+                },
+                "Best_Player": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Game/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Game": {
+                  "example": "any"
+                },
+                "Developer": {
+                  "example": "any"
+                },
+                "release_date": {
+                  "example": "any"
+                },
+                "Best_Player": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Genere/": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Game": {
+                  "example": "any"
+                },
+                "Developer": {
+                  "example": "any"
+                },
+                "release_date": {
+                  "example": "any"
+                },
+                "Best_Player": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Genere/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Game": {
+                  "example": "any"
+                },
+                "Developer": {
+                  "example": "any"
+                },
+                "release_date": {
+                  "example": "any"
+                },
+                "Best_Player": {
                   "example": "any"
                 }
               }
