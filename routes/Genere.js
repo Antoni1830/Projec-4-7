@@ -2,15 +2,18 @@ const express=require('express');
 const router=express.Router();
 
 const  GenereController=require('../controllers/Genere');
+const{validateCreate}=require('../middlewares/Validate_genere');
+const{isAuthenticated}=require ("../middlewares/authenticate");
+
 
 router.get('/', GenereController.getAll);
 
 router.get('/:id',GenereController.getSingle);
 
 
-router.post('/', GenereController.createUser);
+router.post('/',validateCreate, isAuthenticated ,GenereController.createUser);
 
-router.put('/:id',GenereController.updateUser);
+router.put('/:id',isAuthenticated,GenereController.updateUser);
 
 router.delete('/:id', GenereController.deleteUser);
 
